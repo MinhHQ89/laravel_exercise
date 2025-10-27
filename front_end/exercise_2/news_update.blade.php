@@ -163,25 +163,16 @@
             <div class="form-group">
                 <label for="title" class="form-label">Title</label>
                 <input type="text" name="title" id="title" class="form-input" value="{{ $news->title }}">
-                @error('title')
-                    <div class="error-message">{{ $message }}</div>
-                @enderror
             </div>
             
             <div class="form-group">
                 <label for="email" class="form-label">Email</label>
                 <input type="email" name="email" id="email" class="form-input" value="{{ $news->email }}">
-                @error('email')
-                    <div class="error-message">{{ $message }}</div>
-                @enderror
             </div>
             
             <div class="form-group">
                 <label for="description" class="form-label">Description</label>
                 <textarea name="description" id="description" class="form-textarea" rows="6">{{ $news->description }}</textarea>
-                @error('description')
-                    <div class="error-message">{{ $message }}</div>
-                @enderror
             </div>
             
             <div class="btn-group">
