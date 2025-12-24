@@ -116,7 +116,7 @@
 
 <div class="admin-container">
     <h1 class="admin-title">{{ $pageName }}</h1>
-    
+
     <table class="admin-table">
         <thead>
             <tr>
@@ -131,12 +131,12 @@
             <tr>
                 <td>{{$row->id}}</td>
                 <td>
-                    <a href="/laravel/admin/news/{{$row->id}}" class="admin-link">{{$row->title}}</a>
+                    <a href="/admin/news/{{$row->id}}" class="admin-link">{{$row->title}}</a>
                 </td>
                 <td>{{$row->email}}</td>
                 <td>
-                    <a href="/laravel/admin/news/edit/{{$row->id}}" class="btn-edit">Edit</a>
-                    <form class="inline-form" method="POST" action="/laravel/admin/news/delete/{{$row->id}}" onsubmit="return ConfirmDelete(this)">
+                    <a href="/admin/news/edit/{{$row->id}}" class="btn-edit">Edit</a>
+                    <form class="inline-form" method="POST" action="/admin/news/delete/{{$row->id}}" onsubmit="return ConfirmDelete(this)">
                         @method('DELETE')
                         @csrf
                         <button type="submit" class="btn-delete">Delete</button>

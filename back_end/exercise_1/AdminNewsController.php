@@ -42,7 +42,7 @@ class AdminNewsController extends Controller
     public function store(Request $request)
     {
         $news = new News();
-        $news->title = $request->title; 
+        $news->title = $request->title;
         $news->email = $request->email;
         $news->description = $request->description;
         $news->slug = \Str::slug($request->title);

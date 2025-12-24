@@ -153,30 +153,30 @@
 
 <div class="admin-container">
     <h1 class="admin-title">{{ $pageName }}</h1>
-    
+
     <div class="admin-form">
-        <form method="post" action="/laravel/admin/news/update/{{ $news->id }}">
+        <form method="post" action="/admin/news/update/{{ $news->id }}">
             @method('PATCH')
             @csrf
             <input type="hidden" name="id" value="{{ $news->id }}">
-            
+
             <div class="form-group">
                 <label for="title" class="form-label">Title</label>
                 <input type="text" name="title" id="title" class="form-input" value="{{ $news->title }}">
             </div>
-            
+
             <div class="form-group">
                 <label for="email" class="form-label">Email</label>
                 <input type="email" name="email" id="email" class="form-input" value="{{ $news->email }}">
             </div>
-            
+
             <div class="form-group">
                 <label for="description" class="form-label">Description</label>
                 <textarea name="description" id="description" class="form-textarea" rows="6">{{ $news->description }}</textarea>
             </div>
-            
+
             <div class="btn-group">
-                <a href="/laravel/admin/news" class="btn btn-secondary">← Back to List</a>
+                <a href="/admin/news" class="btn btn-secondary">← Back to List</a>
                 <button type="submit" class="btn btn-submit">Update News</button>
             </div>
         </form>
