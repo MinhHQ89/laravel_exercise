@@ -43,7 +43,7 @@ class AdminNewsController extends Controller
     {
         $news = new News();
         $news->title = $request->title;
-        $news->email = $request->email;
+        $news->summary = $request->summary;
         $news->description = $request->description;
         $news->slug = \Str::slug($request->title);
 
@@ -88,13 +88,13 @@ class AdminNewsController extends Controller
     {
         $request->validate([
             'title' => 'required|string|max:255',
-            'email' => 'required|email|max:255',
+            'summary' => 'required|string|max:255',
             'description' => 'required|string|max:1000'
         ]);
 
         $news = News::find($id);
         $news->title = $request->title;
-        $news->email = $request->email;
+        $news->summary = $request->summary;
         $news->description = $request->description;
 
         $news->save();

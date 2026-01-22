@@ -166,8 +166,8 @@
             </div>
 
             <div class="form-group">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" name="email" id="email" class="form-input" value="{{ $news->email }}">
+                <label for="summary" class="form-label">Summary</label>
+                <input type="text" name="summary" id="summary" class="form-input" value="{{ $news->summary }}">
             </div>
 
             <div class="form-group">

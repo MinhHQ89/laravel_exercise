@@ -142,7 +142,7 @@
             <tr>
                 <th>ID</th>
                 <th>Title</th>
-                <th>Email</th>
+                <th>Summary</th>
                 <th>Tools</th>
             </tr>
         </thead>
@@ -153,7 +153,7 @@
                 <td>
                     <a href="/admin/news/{{$row->id}}" class="admin-link">{{$row->title}}</a>
                 </td>
-                <td>{{$row->email}}</td>
+                <td>{{$row->summary}}</td>
                 <td>
                     <a href="/admin/news/edit/{{$row->id}}" class="btn-edit">Edit</a>
                     <form class="inline-form" method="POST" action="/admin/news/delete/{{$row->id}}" onsubmit="return ConfirmDelete(this)">
