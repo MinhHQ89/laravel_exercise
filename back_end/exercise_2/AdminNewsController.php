@@ -92,7 +92,7 @@ class AdminNewsController extends Controller
             'description' => 'required|string|max:1000'
         ]);
 
-        $news = News::find($id);
+        $news = News::findOrFail($id);
         $news->title = $request->title;
         $news->summary = $request->summary;
         $news->description = $request->description;
@@ -109,7 +109,7 @@ class AdminNewsController extends Controller
      */
     public function destroy($id)
     {
-        $news = News::find($id);
+        $news = News::findOrFail($id);
 
         $news->delete();
         return redirect()->route('admin.news.index')->with('status', 'Data deleted successfully.');
