@@ -15,8 +15,7 @@ class AdminNewsController extends Controller
      */
     public function index()
     {
-        $news = \DB::table('news')->select('*');
-        $news = $news->get();
+        $news = News::all();
 
         $pageName = 'Page Name - News';
 
